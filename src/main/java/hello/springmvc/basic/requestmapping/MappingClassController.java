@@ -15,20 +15,20 @@ public class MappingClassController {
 
     @PostMapping
     public String addUsers() {
-        return "post user";
+        return "post users";
     }
 
-    @GetMapping("{userId}")
+    @GetMapping("/{userId}")
     public String findUser(@PathVariable String userId) {
-        return "get userID=" + userId;
+        return "get userId=" + userId;
     }
 
-    @PatchMapping("{userId}")
-    public String patchUser(@PathVariable String userId) {
+    @PatchMapping("/{userId}")
+    public String updateUser(@PathVariable String userId) {
         return "update userId=" + userId;
     }
 
-    @DeleteMapping("{userId}")
+    @DeleteMapping("/{userId}")
     public String deleteUser(@PathVariable String userId) {
         return "delete userId=" + userId;
     }
